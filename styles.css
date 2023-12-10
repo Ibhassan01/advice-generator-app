@@ -1,0 +1,119 @@
+/* Colors */
+:root{
+/*-----------------Primary-------------*/
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+
+/*-------------------Neutral--------------*/
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+}
+body{
+    background-color: var(--Dark-Blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+main{
+    background-color: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 90%;
+    border-radius: 20px;
+}
+.advice-num{
+    font-size: 1.2rem;
+    color: var(--Neon-Green);
+    font-weight: 400;
+    margin: 7% 0;
+}
+.advice{
+    display: none;
+    color: var(--Light-Cyan);
+    font-size: 2rem;
+    text-align: center;
+}
+.mobile-divider{
+    margin: 6% 0 4% 0;
+}
+.desktop-divider{
+    display: none;
+}
+.dice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    background-color: var(--Neon-Green);
+    transform: translateY(45px);
+    transition: .3s;
+}
+.dice:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px var(--Neon-Green);
+}
+@media only screen and (min-width: 250px){
+    .advice{
+        font-size: 1.2rem;
+    }
+    .mobile-divider{
+        width: 80%;
+    }
+    .dice{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 100px;
+        transform: translateY(30px)
+    }
+}
+@media only screen and (min-width: 540px){
+    .advice{
+        font-size: 1.5rem;
+    }
+    .mobile-divider{
+        margin: 6% 0 0 0;
+    }
+}
+@media only screen and (min-width:700px){
+    main{
+        width: 60%;
+    }
+    .advice-num{
+        margin: 5% 0;
+    }
+    .advice{
+        font-size: 1.5rem;
+    }
+    .mobile-divider{
+        margin: 8% 0 0 0;
+    }
+}
+@media only screen and (min-width:900px){
+    main{
+        width: 35%;
+        padding: .8%;
+    }
+    .advice{
+        font-size: 1.5rem;
+    }
+    .mobile-divider{
+        display: none;
+    }
+    .desktop-divider{
+        width: 85%;
+        display: block;
+        margin: 8% 0 0 0;
+    }
+}
