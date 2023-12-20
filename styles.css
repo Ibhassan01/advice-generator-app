@@ -10,6 +10,8 @@
 --Dark-Blue: hsl(218, 23%, 16%);
 }
 body{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
     background-color: var(--Dark-Blue);
     height: 100vh;
     display: flex;
@@ -59,7 +61,7 @@ main{
 }
 .dice:hover{
     cursor: pointer;
-    box-shadow: 1px 1px 10px var(--Neon-Green);
+    box-shadow: 2px 2px 10px var(--Neon-Green), -2px -2px 10px var(--Neon-Green);
 }
 @media only screen and (min-width: 250px){
     .advice{
