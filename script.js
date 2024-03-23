@@ -6,6 +6,7 @@ let diceIcon = document.getElementById('dice-icon');
 diceButton.addEventListener('click', async() => {
     try {
         adviceNumber.style.color = 'hsl(150, 100%, 66%)';
+        adviceNumber.innerHTML = 'Fetching Quotes 🧐';
         advice.style.display = 'none';
         
         let fetchData = await fetch('https://api.adviceslip.com/advice');
